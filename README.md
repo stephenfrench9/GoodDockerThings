@@ -1,11 +1,12 @@
 \mounts
 
-So, build this docker file into an image, call it 'today', and then
-execute the following command.
+So, build this docker file into an image
+
+``docker build . -t today``
+
+Run the image with the following command
 
 ``docker run -v "$(pwd)"/portal:/app today``
 
-Now you have a container that is using the directory you launched from as its working directory.
-In this case, the container is using a directory it refers to as '/app', but that dir is really
-the directory './portal', so I think you had better make sure that portal is in your working directory
-when you launch the container. The container must be launched from the right place.
+The image is going to run whatever you have placed in /portal and called app.py. It will use /portal/ as its working directory.
+Note: The image really expects to find something called "app.py" in whatever directory you desginate as its working directory.
