@@ -4,7 +4,7 @@ Launch a jupyter notebook container
 
 Find the ports the notebook is being publish too: (its prolly 8888)
 
-`docker inspect cloudwhale'
+`docker inspect cloudwhale`
 
 Find the working directory of the container:
 
