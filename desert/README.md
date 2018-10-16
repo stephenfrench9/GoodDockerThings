@@ -16,5 +16,5 @@ Shut down the notebook.
 
 Start the container again. This time, connect your host port to the containers port
 
-`docker run -d -p 8888:8888 -v $(pwd):/home/jovyan cloudwhale`
+`docker run -d -p 8888:8888 -v $(pwd):/home/jovyan jupyter/minimal-notebook`
 
