@@ -1,8 +1,8 @@
 # Use an official Python runtime as a parent image
-FROM python:2.7-slim
+FROM ubuntu:latest
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /app/sugar
 
 # Copy the current directory contents into the container at /app
 
@@ -17,4 +17,4 @@ EXPOSE 80
 ENV NAME World
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+# CMD ["python", "app.py"]

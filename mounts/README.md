@@ -5,8 +5,8 @@ So, build this docker file into an image
 
 Run the image with the following command
 
-``docker run -v "$(pwd)"/portal:/app today``
+``docker run -itv $(pwd):/created_from_commandline today``
 
-The image is going to run whatever you have placed in /portal and called app.py. It will use /portal/ as its working directory.
-Note: The image really expects to find something called "app.py" in whatever directory you desginate as its working directory.
+When using the -v flag, you really have to specify full addresses, relative addresses are not ok. The -v flag will create a new directory in the image. Also, when you set the working directory in the Dockerfile, a new directory is created. 
 
+open question: which of these dirs is created first, and can they collide with each other? Do they happen after the container is running? Or during some pre-run build time?
